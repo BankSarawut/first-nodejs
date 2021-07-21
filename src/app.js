@@ -7,14 +7,14 @@ app.use(express.urlencoded({extended: true}));
 
 require('./routes')(app)
 
-// app.get('/status', function(req,res){
-//     res.send('Hello nodejs server');
-// })
+ app.get('/status', function(req,res){
+    res.send('Hello nodejs server');
+ })
 
-// app.get('/hello/:person', function(req,res){
-//     console.log('hello -'+req.params.person);
-//     res.send('say hello with ' + req.params.person);
-// })
+app.get('/hello/:person', function(req,res){
+    console.log('hello -'+req.params.person);
+    res.send('say hello with ' + req.params.person);
+})
 
 
 
